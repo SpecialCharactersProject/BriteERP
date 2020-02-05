@@ -6,14 +6,12 @@ public class Test1 {
 
     @Test
 
-    public void test() {
+    public void test(){
         System.out.println("Hello from other side");
     }
-
-
     @Test
-    public void testSKYbranch() {
 
-        System.out.println("SKYBranch is testing");
+    public void test2(){
+        System.out.println("Hello from this side");
     }
 }
