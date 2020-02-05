@@ -9,4 +9,9 @@ public class Test1 {
     public void test(){
         System.out.println("Hello from other side");
     }
+    @Test
+
+    public void test2(){
+        System.out.println("Hello from this side");
+    }
 }
