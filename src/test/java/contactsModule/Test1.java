@@ -6,7 +6,11 @@ public class Test1 {
 
     @Test
 
-    public void test(){
+    public void test() {
         System.out.println("Hello from other side");
+
+    }
+    public void symbat(){
+        System.out.println("hello");
     }
 }
