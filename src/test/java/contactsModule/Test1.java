@@ -13,6 +13,6 @@ public class Test1 {
     @Test
 
     public void tester6(){
-        System.out.println("Kani");
+        System.out.println("Kani...");
     }
 }
