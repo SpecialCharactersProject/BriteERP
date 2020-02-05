@@ -16,4 +16,10 @@ public class Test1 {
     public void test2(){
         System.out.println("Hello from this side");
     }
+
+    @Test
+
+    public void tester6(){
+        System.out.println("Kani...");
+    }
 }
