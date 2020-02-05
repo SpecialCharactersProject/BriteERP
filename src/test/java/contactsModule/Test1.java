@@ -8,6 +8,8 @@ public class Test1 {
 
     public void test(){
         System.out.println("Hello from other side");
+        System.out.println("SeleniumProject One ");
+        System.out.println("Hi this is Binny");
     }
     @Test
 
