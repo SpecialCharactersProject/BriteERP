@@ -13,4 +13,10 @@ public class Test1 {
     public void symbat(){
         System.out.println("hello");
     }
+
+    @Test
+
+    public void tester6(){
+        System.out.println("Kani...");
+    }
 }
