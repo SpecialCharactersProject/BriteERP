@@ -1,4 +1,4 @@
-package contactsModule;
+package test;
 
 import org.testng.annotations.Test;
 
