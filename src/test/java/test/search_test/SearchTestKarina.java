@@ -1,4 +1,6 @@
 package test.search_test;
 
-public class SearchTestKarina {
+import test.base_test.BaseTest;
+
+public class SearchTestKarina extends BaseTest {
 }

@@ -1,4 +1,6 @@
 package test.import_test;
 
-public class ImportTestBinny {
+import test.base_test.BaseTest;
+
+public class ImportTestBinny extends BaseTest {
 }

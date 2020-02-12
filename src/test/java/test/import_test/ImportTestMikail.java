@@ -1,4 +1,6 @@
 package test.import_test;
 
-public class ImportTestMikail {
+import test.base_test.BaseTest;
+
+public class ImportTestMikail extends BaseTest {
 }

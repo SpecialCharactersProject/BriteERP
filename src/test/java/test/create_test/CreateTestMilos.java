@@ -1,4 +1,6 @@
 package test.create_test;
 
-public class CreateTestMilos {
+import test.base_test.BaseTest;
+
+public class CreateTestMilos extends BaseTest {
 }
