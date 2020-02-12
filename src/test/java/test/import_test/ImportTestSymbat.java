@@ -1,4 +1,6 @@
 package test.import_test;
 
-public class ImportTestSymbat {
+import test.base_test.BaseTest;
+
+public class ImportTestSymbat extends BaseTest {
 }
