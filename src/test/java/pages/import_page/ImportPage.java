@@ -1,4 +1,6 @@
 package pages.import_page;
 
-public class ImportPage {
+import pages.base_page.BasePage;
+
+public class ImportPage  extends BasePage {
 }
