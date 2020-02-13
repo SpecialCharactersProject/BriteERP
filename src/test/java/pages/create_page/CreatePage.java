@@ -3,9 +3,10 @@ package pages.create_page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pages.base_page.BasePage;
 import utilities.Driver;
 
-public class CreatePage {
+public class CreatePage extends BasePage {
     public CreatePage(){
         PageFactory.initElements(Driver.getDriver(),this
         );
@@ -28,6 +29,10 @@ public class CreatePage {
 
    @FindBy(className = "btn btn-primary btn-sm o_form_button_edit")
     public WebElement editBtn;
+
+
+
+
 
 
 

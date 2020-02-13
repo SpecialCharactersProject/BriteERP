@@ -1,4 +1,6 @@
 package test.create_test;
 
-public class CreateTestTalha {
+import test.base_test.BaseTest;
+
+public class CreateTestTalha extends BaseTest {
 }
