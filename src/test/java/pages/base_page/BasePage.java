@@ -11,16 +11,11 @@ public class BasePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(partialLinkText = "Contacts")
+    @FindBy(partialLinkText ="Contact")
     public WebElement contactsButton;
 
-    @FindBy(partialLinkText = "Create")
-    public WebElement createButton;
 
-    @FindBy(partialLinkText = "Import")
-    public WebElement importButton;
-
-    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    @FindBy(partialLinkText = "//input[@class='o_searchview_input']")
     public WebElement searchButton;
 
 
