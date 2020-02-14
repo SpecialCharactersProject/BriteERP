@@ -11,7 +11,7 @@ public class BasePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(partialLinkText = "Contacts")
+    @FindBy(partialLinkText ="Contact")
     public WebElement contactsButton;
 
 
