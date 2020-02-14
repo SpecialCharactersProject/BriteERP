@@ -1,21 +1,32 @@
 package pages.login_page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
-import utilities.Driver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import pages.base_page.BasePage;
 import utilities.ConfigurationReader;
+import utilities.Driver;
 
-import javax.security.auth.login.Configuration;
+import java.util.concurrent.TimeUnit;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
+public LoginPage(){
+    PageFactory.initElements(Driver.getDriver(),this);
 
-    @Test
-    public void loginBrightERP() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-         Driver.getDriver().findElement(By.id("login")).sendKeys(ConfigurationReader.getProperty("username1"));
-       Driver.getDriver().findElement(By.id("password")).sendKeys(ConfigurationReader.getProperty("password1"));
-         Driver.getDriver().findElement(By.xpath("//button[.='Log in']")).click();
-    }
+}
+@FindBy(id = "login")
+    public WebElement usernameInputBox;
+@FindBy(id = "password")
+    public WebElement passwordInputBox;
+@FindBy(xpath = "//button[@type='submit']")
+    public WebElement loginButton;
+
+public void login(){
+
+    usernameInputBox.sendKeys(ConfigurationReader.getProperty("username2"));
+    passwordInputBox.sendKeys(ConfigurationReader.getProperty("password2"));
+    loginButton.click();
+}
+
 }
