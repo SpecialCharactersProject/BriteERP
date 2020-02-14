@@ -25,7 +25,6 @@ public LoginPage(){
 public void login(){
 
     usernameInputBox.sendKeys(ConfigurationReader.getProperty("username2"));
-    Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     passwordInputBox.sendKeys(ConfigurationReader.getProperty("password2"));
     loginButton.click();
 }
