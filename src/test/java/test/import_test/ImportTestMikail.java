@@ -10,16 +10,20 @@ public class ImportTestMikail extends BaseTest {
     LoginPage loginPage = new LoginPage();
     ImportPage importPage = new ImportPage();
     @BeforeClass
-    public void login() throws InterruptedException {
+    public void login()  {
         loginPage.login();
-    }
-    @Test
-    public void click_contacts() throws InterruptedException {
-        loginPage.contactsModuleTab.click();
     }
 
     @Test
-    public void click_import_button(){
-        importPage.importButton.click();
+    public void click_contacts_module(){
+        loginPage.contactsButton.click();
     }
+
+    @Test
+    public void click_import_btn(){
+    importPage.importBtn.click();
+    }
+
+
+
 }
