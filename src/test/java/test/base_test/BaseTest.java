@@ -12,9 +12,9 @@ public class BaseTest {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
-    @AfterClass
-
-    public void quit(){
-        Driver.quitDriver();
-    }
+//   // @AfterClass
+//
+//   // public void quit(){
+//        Driver.quitDriver();
+//    }
 }
