@@ -30,30 +30,26 @@ public class SearchTestKarina extends BaseTest {
         log.searchButton.sendKeys("General Manager" + Keys.ENTER);
     }
 
-    @Test
-    public void styleOfContacts () throws InterruptedException {
-        log.contactsButton.click();
-        Thread.sleep(2000);
-
-        Driver.getDriver().findElement(By.xpath("//button[@accesskey='l']")).click();
-        Thread.sleep(3000);
-        Driver.getDriver().findElement(By.xpath("//button[@accesskey='k']")).click();
-    }
-
-    @Test
-    public void numberOfContacts () throws InterruptedException{
-        log.contactsButton.click();
-        Thread.sleep(3000);
-
-        Driver.getDriver().findElement(By.xpath("//span[@class='o_pager_value']")).click();
-        Thread.sleep(4000);
-        Actions action = new Actions(Driver.getDriver());
-        action.doubleClick().perform();
-
-
-
-
-    }
+//    @Test
+//    public void styleOfContacts () throws InterruptedException {
+//        log.contactsButton.click();
+//        Thread.sleep(2000);
+//
+//        Driver.getDriver().findElement(By.xpath("//button[@accesskey='l']")).click();
+//        Thread.sleep(3000);
+//        Driver.getDriver().findElement(By.xpath("//button[@accesskey='k']")).click();
+//    }
+//
+//    @Test
+//    public void numberOfContacts () throws InterruptedException{
+//        log.contactsButton.click();
+//        Thread.sleep(3000);
+//
+//        Driver.getDriver().findElement(By.xpath("//span[@class='o_pager_value']")).click();
+//        Thread.sleep(4000);
+//        Actions action = new Actions(Driver.getDriver());
+//        action.doubleClick().perform();
+//    }
 
 
 }
