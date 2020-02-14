@@ -14,13 +14,8 @@ public class BasePage {
     @FindBy(partialLinkText = "Contacts")
     public WebElement contactsButton;
 
-    @FindBy(partialLinkText = "Create")
-    public WebElement createButton;
 
-    @FindBy(partialLinkText = "Import")
-    public WebElement importButton;
-
-    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    @FindBy(partialLinkText = "//input[@class='o_searchview_input']")
     public WebElement searchButton;
 
 
