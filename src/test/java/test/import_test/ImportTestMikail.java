@@ -21,7 +21,8 @@ public class ImportTestMikail extends BaseTest {
 
     @Test
     public void click_import_btn(){
-    importPage.importBtn.click();
+
+        importPage.importBtn.click();
     }
 
 

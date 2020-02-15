@@ -14,4 +14,6 @@ public class ImportPage {
     @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
     public WebElement importBtn;
 
+
+
 }
