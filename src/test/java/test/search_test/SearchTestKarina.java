@@ -5,51 +5,56 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.login_page.LoginPage;
+import pages.search_page.SearchPage;
 import test.base_test.BaseTest;
+import utilities.BrightERPUtil;
 import utilities.Driver;
 
 public class SearchTestKarina extends BaseTest {
 
     LoginPage log = new LoginPage();
+    SearchPage searchPage = new SearchPage();
 
     @Test
     public void loggingIn () {
         log.login();
     }
 
-    @Test
-    public void searchMultipleParameters () throws InterruptedException {
+    @Test (priority = 3)
+    public void searchMultipleParameters () {
         log.contactsButton.click();
-        Thread.sleep(3000);
+        BrightERPUtil.pause(2);
 
         log.searchButton.click();
+        BrightERPUtil.pause(2);
         log.searchButton.sendKeys("Asan" + Keys.ENTER);
-        Thread.sleep(3000);
         log.searchButton.sendKeys("General Manager" + Keys.ENTER);
+        Assert.assertTrue(searchPage.afterEnteringInSearchBox.isDisplayed(), "Search Multiple Parameters Test is failed.");
     }
 
-//    @Test
-//    public void styleOfContacts () throws InterruptedException {
-//        log.contactsButton.click();
-//        Thread.sleep(2000);
-//
-//        Driver.getDriver().findElement(By.xpath("//button[@accesskey='l']")).click();
-//        Thread.sleep(3000);
-//        Driver.getDriver().findElement(By.xpath("//button[@accesskey='k']")).click();
-//    }
-//
-//    @Test
-//    public void numberOfContacts () throws InterruptedException{
-//        log.contactsButton.click();
-//        Thread.sleep(3000);
-//
-//        Driver.getDriver().findElement(By.xpath("//span[@class='o_pager_value']")).click();
-//        Thread.sleep(4000);
-//        Actions action = new Actions(Driver.getDriver());
-//        action.doubleClick().perform();
-//    }
+    @Test (priority = 2)
+    public void styleOfContacts () {
+        log.contactsButton.click();
+        BrightERPUtil.pause(3);
+
+        searchPage.listButton.click();
+        BrightERPUtil.pause(3);
+        Assert.assertTrue(searchPage.listTable.isDisplayed(), "The table is not displayed.");
+        searchPage.kanbanButton.click();
+        BrightERPUtil.pause(3);
+        Assert.assertTrue(searchPage.kanbanTable.isDisplayed(), "Kanban table is not displayed.");
+    }
+
+    @Test (priority = 1)
+    public void numberOfContacts () {
+        log.contactsButton.click();
+        BrightERPUtil.pause(3);
+        searchPage.numOfElementsDisplayed.click();
+        Assert.assertTrue(searchPage.numOfElementsDisplayed.isDisplayed(), "The number of Contacts in not displayed.");
+    }
 
 
 }
