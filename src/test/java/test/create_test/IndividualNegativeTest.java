@@ -6,33 +6,29 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.create_page.CompanyNegativeLocators;
 import pages.create_page.IndividualNegativeLocators;
-import pages.login_page.LoginPage;
 import pages.login_page.LoginPageMilos;
-import test.base_test.BaseTest;
 import utilities.Driver;
 
-public class CreateTestMilos extends BaseTest {
+public class IndividualNegativeTest {
 
     LoginPageMilos loginPage = new LoginPageMilos();
-
     IndividualNegativeLocators individualNegativeLocators = new IndividualNegativeLocators();
 
-    CompanyNegativeLocators contactCreationCompanyNegative = new CompanyNegativeLocators();
-
-    @BeforeMethod
+    @BeforeClass
     public void loginToApp() {
         loginPage.loginBrightERP();
     }
-
 
     @Test        //   Individual Contact Creation Negative Scenario
     public void individualNegTest() {
         individualNegativeLocators.contactsModule.click();
         individualNegativeLocators.createButton.click();
+//        individualNegativeLocators.companyRadioButton.click();
+
+//       individualNegativeLocators.individualRadioButton.click();
         Faker faker = new Faker();
         individualNegativeLocators.addressStreet1Individual.sendKeys(faker.address().streetAddress());
         individualNegativeLocators.addressStreet2Individual.sendKeys(faker.address().streetAddress());
@@ -58,35 +54,7 @@ public class CreateTestMilos extends BaseTest {
         individualNegativeLocators.languageInd.click();
         individualNegativeLocators.saveButtonInd.click();
 
-        Assert.assertTrue(individualNegativeLocators.errorMessageInd.isDisplayed(), "Test FAILED");
+        Assert.assertTrue(individualNegativeLocators.errorMessageInd.isDisplayed(),"Test FAILED");
 
     }
-
-
-    @Test(priority = 1)     //   Company Contact Creation Negative Scenario
-    public void companyNegTest() {
-        contactCreationCompanyNegative.contactsModule.click();
-        contactCreationCompanyNegative.createButton.click();
-        contactCreationCompanyNegative.companyRadioButton.click();
-        Faker faker = new Faker();
-        contactCreationCompanyNegative.streetField.sendKeys(faker.address().streetAddress());
-        contactCreationCompanyNegative.street2Field.sendKeys(faker.address().streetAddress());
-        contactCreationCompanyNegative.cityField.sendKeys(faker.address().cityName());
-        contactCreationCompanyNegative.stateChoose.click();
-        contactCreationCompanyNegative.USSRchoose.click();
-        contactCreationCompanyNegative.zipCode.sendKeys(faker.address().zipCode());
-        contactCreationCompanyNegative.country.click();
-        contactCreationCompanyNegative.countryABCD.click();
-        contactCreationCompanyNegative.TIN.sendKeys(faker.idNumber().ssnValid());
-        contactCreationCompanyNegative.phone.sendKeys(faker.idNumber().invalid());
-        contactCreationCompanyNegative.mobile.sendKeys(faker.phoneNumber().cellPhone());
-        contactCreationCompanyNegative.email.sendKeys("thisIsFakeEmail@cybertek.com");
-        contactCreationCompanyNegative.website.sendKeys("www.cybertek.com");
-        contactCreationCompanyNegative.Language.click();
-        contactCreationCompanyNegative.Language.click();
-        contactCreationCompanyNegative.saveButton.click();
-
-        Assert.assertTrue(contactCreationCompanyNegative.errorMessage.isDisplayed(), "Test FAILED");
-    }
-
 }
