@@ -8,7 +8,7 @@ import utilities.Driver;
 public class BaseTest {
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
