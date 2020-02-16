@@ -52,11 +52,8 @@ public class SearchTestKarina extends BaseTest {
     public void numberOfContacts () {
         log.contactsButton.click();
         BrightERPUtil.pause(3);
-
-//        searchPage.numOfElementsDisplayed.click();
-
-        Actions action = new Actions(Driver.getDriver());
-        action.doubleClick(searchPage.numOfElementsDisplayed).perform();
+        searchPage.numOfElementsDisplayed.click();
+        Assert.assertTrue(searchPage.numOfElementsDisplayed.isDisplayed(), "The number of Contacts in not displayed.");
     }
 
 
