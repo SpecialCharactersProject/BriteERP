@@ -14,4 +14,15 @@ public class ImportPage {
     @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
     public WebElement importBtn;
 
+    @FindBy(xpath = "//label[@class='btn btn-primary']")
+    public WebElement importLoadFile;
+
+    @FindBy(xpath = "//button[contains(text(), 'Cancel')]")
+    public WebElement cancelButton;
+
+    @FindBy(xpath = "//a[contains(text(), 'Help')]")
+    public WebElement helpButton;
+
+
+
 }
