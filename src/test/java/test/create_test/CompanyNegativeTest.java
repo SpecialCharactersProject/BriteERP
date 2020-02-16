@@ -45,7 +45,7 @@ public class CompanyNegativeTest {
 //
         contactCreationCompanyNegative.phone.sendKeys(faker.idNumber().invalid());
         contactCreationCompanyNegative.mobile.sendKeys(faker.phoneNumber().cellPhone());
-        contactCreationCompanyNegative.email.sendKeys("thisIsFakeEmail@cybertek.com");
+        contactCreationCompanyNegative.email.sendKeys("thisIsFake@cybertek.com");
         contactCreationCompanyNegative.website.sendKeys("www.cybertek.com");
         contactCreationCompanyNegative.Language.click();
         contactCreationCompanyNegative.Language.click();
