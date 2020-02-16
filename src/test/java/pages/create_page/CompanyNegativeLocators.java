@@ -9,23 +9,11 @@ import utilities.Driver;
 
 import java.time.LocalDate;
 
-public class ContactCreationCompanyNegative {
+public class CompanyNegativeLocators {
 
-    public ContactCreationCompanyNegative() {
+    public CompanyNegativeLocators() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-    // email
-    @FindBy(id = "login")
-    public WebElement emailInput;
-
-    // password
-    @FindBy(id = "password")
-    public WebElement passwordInput;
-
-    //login
-    @FindBy(xpath = "//button[.='Log in']")
-    public WebElement loginButton;
 
     @FindBy(xpath = "(//li/a/span)[4]")
     public WebElement contactsModule;
@@ -33,42 +21,42 @@ public class ContactCreationCompanyNegative {
     @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
     public WebElement createButton;
 
-    @FindBy(id = "radio204_company")
+    @FindBy(xpath = "//input[@data-value='company']")
     public WebElement companyRadioButton;
 
     @FindBy(xpath = "//button[@accesskey='s']")
     public WebElement saveButton;
 
-    @FindBy(id = "o_field_input_210")
+    @FindBy(xpath = "//input[@name='street']")
     public WebElement streetField;
 
-    @FindBy(id = "o_field_input_211")
+    @FindBy(xpath = "//input[@name='street2']")
     public WebElement street2Field;
 
-    @FindBy(id = "o_field_input_212")
+    @FindBy(xpath = "//input[@name='city']")
     public WebElement cityField;
 
 
-    @FindBy(id = "o_field_input_213")
+    @FindBy(xpath = "(//input[@type='text'])[10]")
     public WebElement stateChoose;
 
     @FindBy(xpath = "//a[.='USSR']")
     public WebElement USSRchoose;
 
 
-    @FindBy(id = "o_field_input_214")
+    @FindBy(xpath = "//input[@name='zip']")
     public WebElement zipCode;
 
-    @FindBy(id = "o_field_input_215")
+    @FindBy(xpath = "(//input[@type='text'])[12]")
     public WebElement country;
 
     @FindBy(xpath = "//a[.='ABCD']")
     public WebElement countryABCD;
 
-    @FindBy(id = "o_field_input_216")
+    @FindBy(xpath = "//input[@name='vat']")
     public WebElement TIN;
 
-    @FindBy(id = "o_field_input_217")
+    @FindBy(id = "o_field_input_218")
     public WebElement Tags;
 
     @FindBy(xpath = "//a[.='Wholesaler']")
@@ -77,19 +65,19 @@ public class ContactCreationCompanyNegative {
     @FindBy(xpath = "//a[.='Prospect']")
     public WebElement TagsChooseProspect;
 
-    @FindBy(id = "o_field_input_219")
+    @FindBy(xpath = "//input[@name='phone']")
     public WebElement phone;
 
-    @FindBy(id = "o_field_input_220")
+    @FindBy(xpath = "//input[@name='mobile']")
     public WebElement mobile;
 
-    @FindBy(id = "o_field_input_222")
+    @FindBy(xpath = "//input[@name='email']")
     public WebElement email;
 
-    @FindBy(id = "o_field_input_223")
+    @FindBy(xpath = "//input[@name='website']")
     public WebElement website;
 
-    @FindBy(id = "o_field_input_225")
+    @FindBy(xpath = "//select[@name='lang']")
     public WebElement Language;
 
     @FindBy(xpath = "//option[.='English']")
