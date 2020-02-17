@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="SmokeSuit">
-    <test name="order">
+    <test name="contacts_module">
         <groups>
             <run>
                 <include name="smokeTest" />
