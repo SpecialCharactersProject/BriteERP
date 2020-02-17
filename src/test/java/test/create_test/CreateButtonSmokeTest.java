@@ -122,6 +122,37 @@ public class CreateButtonSmokeTest extends BaseTest {
         createPage.discardBtn.click();
         createPage.alert.click();
     }
+    @Test()
+    public void editContactButton() {
+        BrightERPUtil.pause(5);
+        createPage.contactsModule.click();
+        BrightERPUtil.pause(4);
+        createPage.editCreateButton.click();
+        Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
+        BrightERPUtil.pause(5);
+        createPage.companyRadioButton.click();
+        BrightERPUtil.pause(2);
+        createPage.contactName.sendKeys(faker.name().firstName() + " " + faker.name().lastName());
+        BrightERPUtil.pause(2);
+        createPage.contactAddressStreet.sendKeys(faker.address().streetName());
+        BrightERPUtil.pause(2);
+        createPage.contactAddressCity.sendKeys(faker.address().city());
+        createPage.addressStateBox.click();
+        BrightERPUtil.pause(2);
+        createPage.companyStateSelection.click();
+        BrightERPUtil.pause(2);
+        createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+        createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
+        createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
+        createPage.contactWebsite.sendKeys("www.craxyland.com");
+        createPage.saveBtn.click();
+        BrightERPUtil.pause(5);
+        createPage.editBtn.click();
+        BrightERPUtil.pause(5);
+        createPage.contactName.sendKeys(faker.name().username());
+        BrightERPUtil.pause(2);
+        createPage.saveBtn.click();
+    }
     @Test       (priority =4)
     public void indNegativeContactCreationTest() {
         indNegativeContact.contactsModule.click();
