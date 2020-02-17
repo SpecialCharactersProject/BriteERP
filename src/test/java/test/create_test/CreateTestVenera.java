@@ -22,7 +22,7 @@ public class CreateTestVenera {
     @Test
     public void testIndividualContactCreation() {
         CreatePage createPage = new CreatePage();
-        createPage.createBtn.click();
+//        createPage.createBtn.click();
 
         Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
         createPage.individualRadioBtn.click();
