@@ -1,8 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="TestAll">
+<suite name="SmokeSuit">
     <test name="order">
+        <groups>
+            <run>
+                <include name="smokeTest" />
+            </run>
+        </groups>
         <classes>
             <class name="test.create_test.CreateButtonSmokeTest" />
+            <class name="test.search_test.SearchTestKani" />
+            <class name="test.search_test.SearchTestKarina" />
+            <class name="test.search_test.SearchTestSercanAbi" />
+            <class name="test.import_test.ImportTestBinny" />
+            <class name="test.import_test.ImportTestMikail" />
+
 
         </classes>
     </test>

@@ -23,13 +23,13 @@ public class ImportTestMikail extends BaseTest {
     ImportPage importPage = new ImportPage();
     public WebDriverWait wait;
 
-    @BeforeClass
-    public void login() {
-        loginPage.login();
+//    @BeforeClass
+//    public void login() {
+//        loginPage.login();
+//
+//    }
 
-    }
-
-    @Test
+    @Test(groups = {"smokeTest"},priority = 18)
     public void validation_of_import_btn() {
         basePage.contactsButton.click();
         Assert.assertTrue(importPage.importBtn.isDisplayed());
@@ -37,7 +37,7 @@ public class ImportTestMikail extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = {"smokeTest"},priority = 19)
     public void importing_contact_file() throws AWTException, InterruptedException {
         basePage.contactsButton.click();
         importPage.importBtn.click();

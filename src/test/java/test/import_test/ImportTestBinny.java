@@ -16,13 +16,13 @@ public class ImportTestBinny extends BaseTest {
     LoginPage loginPage = new LoginPage();
     BasePage basePage = new BasePage();
 
-    @BeforeClass
+//    @BeforeClass
+//
+//    public void login() {
+//        loginPage.login();
+//    }
 
-    public void login() {
-        loginPage.login();
-    }
-
-    @Test
+    @Test(groups = {"smokeTest"},priority = 16)
     public void validation_of_the_cancel_button() throws InterruptedException {
         basePage.contactsButton.click();
         BrightERPUtil.pause(5);
@@ -32,7 +32,7 @@ public class ImportTestBinny extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = {"smokeTest"},priority = 17)
     public void validation_of_the_help_button() {
         basePage.contactsButton.click();
         BrightERPUtil.pause(5);

@@ -18,12 +18,12 @@ public class SearchTestKarina extends BaseTest {
     LoginPage log = new LoginPage();
     SearchPage searchPage = new SearchPage();
 
-    @Test
-    public void loggingIn () {
-        log.login();
-    }
+//    @Test
+//    public void loggingIn () {
+//        log.login();
+//    }
 
-    @Test (priority = 3)
+    @Test (groups = {"smokeTest"},priority = 12)
     public void searchMultipleParameters () {
         log.contactsButton.click();
         BrightERPUtil.pause(2);
@@ -35,7 +35,7 @@ public class SearchTestKarina extends BaseTest {
         Assert.assertTrue(searchPage.afterEnteringInSearchBox.isDisplayed(), "Search Multiple Parameters Test is failed.");
     }
 
-    @Test (priority = 2)
+    @Test (groups = {"smokeTest"},priority = 11)
     public void styleOfContacts () {
         log.contactsButton.click();
         BrightERPUtil.pause(3);
@@ -48,7 +48,7 @@ public class SearchTestKarina extends BaseTest {
         Assert.assertTrue(searchPage.kanbanTable.isDisplayed(), "Kanban table is not displayed.");
     }
 
-    @Test (priority = 1)
+    @Test (groups = {"smokeTest"},priority = 10)
     public void numberOfContacts () {
         log.contactsButton.click();
         BrightERPUtil.pause(3);
