@@ -3,6 +3,8 @@
     <test name="order">
         <classes>
             <class name="create_test.CreateButtonSmokeTest" />
+            <class name="test.search_test.SearchTestKani"   />
+
          
         </classes>
     </test>
