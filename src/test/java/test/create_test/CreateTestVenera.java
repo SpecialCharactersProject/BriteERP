@@ -22,13 +22,13 @@ public class CreateTestVenera {
     @Test
     public void testIndividualContactCreation() {
         CreatePage createPage = new CreatePage();
-        createPage.createBtn.click();
+//        createPage.createBtn.click();
 
-        Assert.assertTrue(createPage.individualContactBtn.isSelected(), "Individual radio selection by default is FAILED");
-        createPage.individualContactBtn.click();
+        Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
+        createPage.individualRadioBtn.click();
 
         Faker faker = new Faker();
-        createPage.individualContactBtn.sendKeys(faker.name().firstName() + " " + faker.name().lastName());
+        createPage.individualRadioBtn.sendKeys(faker.name().firstName() + " " + faker.name().lastName());
 
 
 
