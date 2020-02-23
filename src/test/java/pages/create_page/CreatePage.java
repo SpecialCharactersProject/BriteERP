@@ -6,104 +6,101 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class CreatePage {
+
     public CreatePage() {
-        PageFactory.initElements(Driver.getDriver(), this
-        );
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "(//li/a/span)[4]")
     public WebElement contactsModule;
 
-    @FindBy(className = "btn btn-primary btn-sm o-kanban-button-new btn-default")
-    public WebElement createBtn;
 
-    @FindBy(className = "btn btn-primary btn-sm o_form_button_save")
+    @FindBy(xpath="//button[@class='btn btn-primary btn-sm o_form_button_save']")
     public WebElement saveBtn;
-
-    @FindBy(className = "btn btn-default btn-sm o_form_button_cancel")
-    public WebElement discardBtn;
-
-    @FindBy(id = "radio202_person")
-    public WebElement individualRadioBtn;
-
-    @FindBy(id = "radio202_company")
-    public WebElement companyContactBtn;
-
-    @FindBy(className = "btn btn-primary btn-sm o_form_button_edit")
-    public WebElement editBtn;
-
-    @FindBy(id = "o_field_input_384")
-    public WebElement indContactName;
-
-    @FindBy(id = "o_field_input_388")
-    public WebElement indAddressStreet;
-
-    @FindBy(id = "o_field_input_390")
-    public WebElement indAddressCity;
-
-    @FindBy(id = "o_field_input_392")
-    public WebElement indAddressZip;
-
-    @FindBy(id = "o_field_input_396")
-    public WebElement indJobPosition;
-
-    @FindBy(id = "o_field_input_397")
-    public WebElement indPhone;
-
-    @FindBy(id = "o_field_input_400")
-    public WebElement indEmail;
-
-
-
     @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
     public WebElement createButton;
+    @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
+    public WebElement editCreateButton;
+    @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
+    public WebElement indCreateButton;
 
-    @FindBy(id = "radio204_company")
+    @FindBy(xpath = "//button[contains(text(),' Discard')]")
+    public WebElement discardBtn;
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_edit']")
+    public WebElement editBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/input[1]")
     public WebElement companyRadioButton;
 
-    @FindBy(xpath = "//button[@accesskey='s']")
-    public WebElement companySaveButton;
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/input[1]")
+    public WebElement individualRadioBtn;
 
-    @FindBy(id = "o_field_input_210")
-    public WebElement companyStreetField;
+    @FindBy(xpath = "//input[@placeholder='C\uFEFFo\uFEFFm\uFEFFp\uFEFFa\uFEFFn\uFEFFy']")
+    public WebElement indCompanyNameBox;
+    @FindBy(xpath="//input[@placeholder='Name']")
+    public WebElement contactName;
 
-    @FindBy(id = "o_field_input_211")
-    public WebElement companyStreet2Field;
-    @FindBy(id = "o_field_input_212")
-    public WebElement companyCityField;
-    @FindBy(id = "o_field_input_213")
-    public WebElement comapanyStateChoose;
-    @FindBy(xpath = "//a[.='USSR']")
-    public WebElement companyUSSRchoose;
-    @FindBy(id = "o_field_input_214")
-    public WebElement companyZipCode;
-    @FindBy(id = "o_field_input_215")
-    public WebElement companyCountry;
-    @FindBy(xpath = "//a[.='ABCD']")
-    public WebElement companyCountryABCD;
-    @FindBy(id = "o_field_input_216")
-    public WebElement companyTIN;
-    @FindBy(id = "o_field_input_217")
-    public WebElement companyTags;
-    @FindBy(xpath = "//a[.='Wholesaler']")
-    public WebElement companyTagsChooseWholeseler;
-    @FindBy(xpath = "//a[.='Prospect']")
-    public WebElement companyTagsChooseProspect;
-    @FindBy(id = "o_field_input_219")
-    public WebElement  companyPhone;
-    @FindBy(id = "o_field_input_220")
-    public WebElement companyMobile;
-    @FindBy(id = "o_field_input_222")
-    public WebElement companyEmail;
-    @FindBy(id = "o_field_input_223")
-    public WebElement companyWebsite;
-    @FindBy(id = "o_field_input_225")
-    public WebElement companyLanguage;
-    @FindBy(xpath = "//option[.='English']")
-    public WebElement companyLanguageChooseEnglish;
+    @FindBy(xpath="//div[@name='parent_id']//span[@class='o_dropdown_button']")
+    public WebElement indCompanyNameDropDownBtn;
 
-    @FindBy(xpath = "//div[@class='o_notification_title']")
-    public WebElement companyErrorMessage;
+    @FindBy(linkText = "Create and Edit")
+    public WebElement indCreateAndEditCompany;
+
+    @FindBy(xpath = "/html[1]/body[1]/ul[1]/li[4]")
+    public WebElement indCompanySelection;
+
+    @FindBy(xpath="(//table[@class='o_group o_inner_group o_group_col_6']//select[@class='o_input o_field_widget'])[1]")
+    public WebElement contactAddressTypeBox;
+
+    @FindBy(xpath= "//input[@placeholder='Street...']")
+    public WebElement contactAddressStreet;
+
+    @FindBy(xpath = "//input[@placeholder='City']")
+    public WebElement contactAddressCity;
+
+    @FindBy(xpath="//input[@placeholder='S\uFEFFt\uFEFFa\uFEFFt\uFEFFe']")
+    public WebElement addressStateBox;
+
+    @FindBy(xpath = "//html[1]/body[1]/ul[10]/li[1]/a[1]")
+
+     public  WebElement indAddressStateSelection;
+
+    @FindBy(xpath = "/html[1]/body[1]/ul[2]/li[5]")
+    public WebElement companyStateSelection;
+
+    @FindBy(xpath="//input[@placeholder='ZIP']")
+    public WebElement contactAddressZip;
+
+    @FindBy (xpath = "//input[@placeholder='C\uFEFFo\uFEFFu\uFEFFn\uFEFFt\uFEFFr\uFEFFy']")
+    public WebElement contactCountry;
+
+    @FindBy(xpath = "//html[1]/body[1]/ul[11]/li[1]")
+    public WebElement countrySelection;
+
+
+
+    @FindBy(xpath="//input[@placeholder=\'e.g. Sales Director\']")
+    public WebElement jobPosition;
+
+    @FindBy(xpath="//input[@name='phone']")
+    public WebElement contactPhone;
+
+    @FindBy(xpath="//input[@name='email']")
+    public WebElement contactEmail;
+
+    @FindBy(xpath ="//input[@name='website']")
+    public WebElement contactWebsite;
+
+    @FindBy(xpath = "//div[@name='title']//input[@class='o_input ui-autocomplete-input']")
+   public WebElement ContactTitleBox;
+
+   @FindBy(xpath = "//html[1]/body[1]/ul[3]/li[2]")
+   public  WebElement ContactTitleSelection;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
+    public  WebElement alert;
+
+
 
 
 }
