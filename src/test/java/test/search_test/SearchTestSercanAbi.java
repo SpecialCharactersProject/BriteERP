@@ -27,7 +27,7 @@ public class SearchTestSercanAbi extends BaseTest {
     BrightERPUtil util=new BrightERPUtil();
 
     @BeforeClass
-    public void setUp()   {
+    public void logIn()   {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.usernameInputBox.sendKeys((ConfigurationReader.getProperty("username2")));
         loginPage.passwordInputBox.sendKeys((ConfigurationReader.getProperty("password2")));
@@ -41,11 +41,11 @@ public class SearchTestSercanAbi extends BaseTest {
     public void searchBoxPartialText() {
 
         //Enter partial of the text of search. User should see all the contacts which have the entered characters in the list
-        searchPage.searchInputBox.sendKeys("adel");
+        searchPage.searchInputBox.sendKeys("ad");
         List<WebElement> names = Driver.getDriver().findElements(By.xpath("//div[@class='oe_kanban_global_click o_res_partner_kanban o_kanban_record']"));
         for (WebElement listName : names) {
             String actualName = listName.getText();
-            Assert.assertTrue(actualName.equals("adel"));
+            Assert.assertTrue(actualName.contains("ad"));
 
         }
     }
