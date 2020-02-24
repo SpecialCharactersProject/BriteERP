@@ -34,23 +34,23 @@ public class CreateButtonSmokeTest extends BaseTest {
 
     @Test(groups = {"smokeTest"},priority=1)
     public void companyPositiveContactCreationTest(){
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         createPage.contactsModule.click();
         BrightERPUtil.pause(2);
         createPage.createButton.click();
         Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         createPage.companyRadioButton.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactName.sendKeys(faker.name().firstName()+" "+faker.name().lastName());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressStreet.sendKeys(faker.address().streetName());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressCity.sendKeys(faker.address().city());
         createPage.addressStateBox.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.companyStateSelection.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressZip.sendKeys(faker.address().zipCode());
         createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
         createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
@@ -59,42 +59,42 @@ public class CreateButtonSmokeTest extends BaseTest {
     }
     @Test(groups = {"smokeTest"},priority = 2)
     public void indPositiveContactCreationTest() {
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         createPage.contactsModule.click();
-        BrightERPUtil.pause(10);
+        BrightERPUtil.pause(2);
         createPage.createButton.click();
         Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(1);
         createPage.individualRadioBtn.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactName.sendKeys(faker.name().firstName() + " " + faker.name().lastName());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         Actions action = new Actions(Driver.getDriver());
         action.doubleClick(createPage.indCompanyNameBox).perform();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.indCompanySelection.click();
         Select select=new Select(createPage.contactAddressTypeBox);
         select.selectByVisibleText("Shipping address");
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressStreet.sendKeys(faker.address().streetName());
         createPage.contactAddressCity.sendKeys(faker.address().city());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.addressStateBox.click();
         createPage.indAddressStateSelection.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressZip.sendKeys(faker.address().zipCode());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactCountry.click();
         createPage.countrySelection.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.jobPosition.sendKeys(faker.job().title());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactEmail.sendKeys("superwoman@yyy.com");
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactWebsite.sendKeys("www.cybertek.com");
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.ContactTitleBox.click();
         createPage.ContactTitleSelection.click();
         BrightERPUtil.pause(2);
@@ -102,23 +102,23 @@ public class CreateButtonSmokeTest extends BaseTest {
     }
     @Test(groups = {"smokeTest"},priority=3)
     public void discardButton(){
-        BrightERPUtil.pause(10);
+        BrightERPUtil.pause(2);
         createPage.contactsModule.click();
         BrightERPUtil.pause(2);
         createPage.createButton.click();
         Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         createPage.companyRadioButton.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactName.sendKeys(faker.name().firstName()+" "+faker.name().lastName());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressStreet.sendKeys(faker.address().streetName());
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressCity.sendKeys(faker.address().city());
         createPage.addressStateBox.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.companyStateSelection.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         createPage.contactAddressZip.sendKeys(faker.address().zipCode());
         createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
         createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
@@ -130,31 +130,31 @@ public class CreateButtonSmokeTest extends BaseTest {
     @Test(groups = {"smokeTest"},priority=6)
     public void editContactButton() {
         try {
-            BrightERPUtil.pause(5);
+            BrightERPUtil.pause(3);
             createPage.contactsModule.click();
-            BrightERPUtil.pause(4);
+            BrightERPUtil.pause(1);
             createPage.editCreateButton.click();
             Assert.assertTrue(createPage.individualRadioBtn.isSelected(), "Individual radio selection by default is FAILED");
-            BrightERPUtil.pause(5);
+            BrightERPUtil.pause(3);
             createPage.companyRadioButton.click();
-            BrightERPUtil.pause(2);
+            BrightERPUtil.pause(1);
             createPage.contactName.sendKeys(faker.name().firstName() + " " + faker.name().lastName());
-            BrightERPUtil.pause(2);
+            BrightERPUtil.pause(1);
             createPage.contactAddressStreet.sendKeys(faker.address().streetName());
-            BrightERPUtil.pause(2);
+            BrightERPUtil.pause(1);
             createPage.contactAddressCity.sendKeys(faker.address().city());
             createPage.addressStateBox.click();
-            BrightERPUtil.pause(2);
+            BrightERPUtil.pause(1);
             createPage.companyStateSelection.click();
-            BrightERPUtil.pause(2);
+            BrightERPUtil.pause(1);
             createPage.contactAddressZip.sendKeys(faker.address().zipCode());
             createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
             createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
             createPage.contactWebsite.sendKeys("www.craxyland.com");
             createPage.saveBtn.click();
-            BrightERPUtil.pause(5);
+            BrightERPUtil.pause(2);
             createPage.editBtn.click();
-            BrightERPUtil.pause(5);
+            BrightERPUtil.pause(2);
             createPage.contactName.sendKeys(faker.name().username());
             BrightERPUtil.pause(2);
             createPage.saveBtn.click();
@@ -165,10 +165,10 @@ public class CreateButtonSmokeTest extends BaseTest {
     @Test       (groups = {"smokeTest"},priority =4)
     public void indNegativeContactCreationTest() {
         indNegativeContact.contactsModule.click();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         indNegativeContact.createButton.click();
         Faker faker = new Faker();
-        BrightERPUtil.pause(2);
+        BrightERPUtil.pause(1);
         indNegativeContact.addressStreet1Individual.sendKeys(faker.address().streetAddress());
         indNegativeContact.addressStreet2Individual.sendKeys(faker.address().streetAddress());
         indNegativeContact.cityFieldInd.sendKeys(faker.address().cityName());
@@ -201,16 +201,16 @@ public class CreateButtonSmokeTest extends BaseTest {
     @Test(groups = {"smokeTest"},priority = 5)
     public void companyNegativeContactCreationTest() {
         companyNegativeContact.contactsModule.click();
-        BrightERPUtil.pause(3);
+        BrightERPUtil.pause(2);
 
         companyNegativeContact.alertOk.click();
 
-        BrightERPUtil.pause(3);
+        BrightERPUtil.pause(2);
         companyNegativeContact.contactsModule.click();
 
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         companyNegativeContact.createButton.click();
-        BrightERPUtil.pause(5);
+        BrightERPUtil.pause(2);
         companyNegativeContact.companyRadioButton.click();
         Faker faker = new Faker();
         companyNegativeContact.streetField.sendKeys(faker.address().streetName());
@@ -218,7 +218,7 @@ public class CreateButtonSmokeTest extends BaseTest {
         companyNegativeContact.zipCode.sendKeys(faker.address().zipCode());
         companyNegativeContact.phone.sendKeys(faker.phoneNumber().cellPhone());
         companyNegativeContact.email.sendKeys("jjjjjjj@yahoo.com");
-        BrightERPUtil.pause(4);
+        BrightERPUtil.pause(2);
         companyNegativeContact.saveButton.click();
         BrightERPUtil.pause(3);
         Assert.assertTrue(companyNegativeContact.errorMessage.isDisplayed(), "Test FAILED");
