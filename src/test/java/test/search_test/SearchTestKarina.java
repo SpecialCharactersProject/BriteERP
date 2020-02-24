@@ -25,6 +25,7 @@ public class SearchTestKarina extends BaseTest {
 
     @Test (groups = {"smokeTest"},priority = 12)
     public void searchMultipleParameters () {
+        BrightERPUtil.pause(5);
         log.contactsButton.click();
         BrightERPUtil.pause(2);
 

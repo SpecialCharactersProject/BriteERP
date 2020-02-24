@@ -9,6 +9,7 @@ import pages.base_page.BasePage;
 import pages.import_page.ImportPage;
 import pages.login_page.LoginPage;
 import test.base_test.BaseTest;
+import utilities.BrightERPUtil;
 import utilities.Driver;
 
 import java.awt.*;
@@ -31,6 +32,7 @@ public class ImportTestMikail extends BaseTest {
 
     @Test(groups = {"smokeTest"},priority = 18)
     public void validation_of_import_btn() {
+//        loginPage.login();
         basePage.contactsButton.click();
         Assert.assertTrue(importPage.importBtn.isDisplayed());
         importPage.importBtn.click();
@@ -39,6 +41,7 @@ public class ImportTestMikail extends BaseTest {
 
     @Test(groups = {"smokeTest"},priority = 19)
     public void importing_contact_file() throws AWTException, InterruptedException {
+        BrightERPUtil.pause(5);
         basePage.contactsButton.click();
         importPage.importBtn.click();
         Assert.assertTrue(importPage.importLoadFile.isDisplayed());
@@ -54,6 +57,22 @@ public class ImportTestMikail extends BaseTest {
 //        uploadFileWithRobot("/Users/mikaildurur/Desktop/contacs.xlsx");
 
     }
+//    @Test(groups = {"smokeTest"},priority = 20)
+//    public void validation_of_the_help_button() {
+//        BrightERPUtil.pause(5);
+//        basePage.contactsButton.click();
+//        BrightERPUtil.pause(5);
+//        importPage.importBtn.click();
+//
+//        Assert.assertTrue(importPage.helpButton.isDisplayed(), "Help button is NOT displayed!");
+//
+//        importPage.helpButton.click();
+//        String expectedURL = "https://www.odoo.com/documentation/user/11.0/general/base_import/import_faq.html";
+//
+//        String acturalURL = importPage.helpButton.getAttribute("href");
+//        Assert.assertTrue(acturalURL.equals(expectedURL), "Help button clicking verification FAILED!");
+//
+//    }
 
     public void uploadFileWithRobot(String imagePath) {
         StringSelection stringSelection = new StringSelection(imagePath);
