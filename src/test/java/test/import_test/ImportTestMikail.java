@@ -9,6 +9,7 @@ import pages.base_page.BasePage;
 import pages.import_page.ImportPage;
 import pages.login_page.LoginPage;
 import test.base_test.BaseTest;
+import utilities.BrightERPUtil;
 import utilities.Driver;
 
 import java.awt.*;
@@ -39,6 +40,7 @@ public class ImportTestMikail extends BaseTest {
 
     @Test(groups = {"smokeTest"},priority = 19)
     public void importing_contact_file() throws AWTException, InterruptedException {
+        BrightERPUtil.pause(5);
         basePage.contactsButton.click();
         importPage.importBtn.click();
         Assert.assertTrue(importPage.importLoadFile.isDisplayed());

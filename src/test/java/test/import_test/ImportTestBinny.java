@@ -17,7 +17,7 @@ public class ImportTestBinny extends BaseTest {
     BasePage basePage = new BasePage();
 
 //    @BeforeClass
-//
+
 //    public void login() {
 //        loginPage.login();
 //    }
@@ -34,6 +34,7 @@ public class ImportTestBinny extends BaseTest {
 
     @Test(groups = {"smokeTest"},priority = 17)
     public void validation_of_the_help_button() {
+        BrightERPUtil.pause(5);
         basePage.contactsButton.click();
         BrightERPUtil.pause(5);
         importPage.importBtn.click();
