@@ -35,7 +35,7 @@ public class SearchTestSercanAbi extends BaseTest {
 //
 //    }
 
-    @Test(priority = 1)
+    @Test(groups = {"smokeTest"},priority = 1)
     public void searchBoxPartialText() {
         BrightERPUtil.pause(5);
         basePage.contactsButton.click();
@@ -53,7 +53,7 @@ public class SearchTestSercanAbi extends BaseTest {
     }
 
 
-    @Test(priority = 3)
+    @Test(groups = {"smokeTest"},priority = 3)
     public void searchBoxFavorite()
     {
         BrightERPUtil.pause(5);
