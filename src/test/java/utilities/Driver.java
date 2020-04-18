@@ -13,7 +13,7 @@ public class Driver {
    private static WebDriver driver;
     private Driver(){
     }
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         if(driver ==null){
             String browser = ConfigurationReader.getProperty("browser");
             switch (browser){
@@ -24,6 +24,7 @@ public class Driver {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    break; // ovo sam ja dodao m- mozda treba maci NE ZNAM
                 case "safari":
                     if(System.getProperty("os.name").toLowerCase().contains("windows")){
                         throw new WebDriverException("Windows OS does not support safari");

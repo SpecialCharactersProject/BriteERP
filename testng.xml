@@ -7,6 +7,8 @@
             </run>
         </groups>
         <classes>
+
+
             <class name="test.create_test.CreateButtonSmokeTest" />
             <class name="test.search_test.SearchTestKani" />
             <class name="test.search_test.SearchTestKarina" />
